@@ -1,0 +1,166 @@
+ /* write your style definitions here or create css files and include them here */
+
+/******************************************
+*   Robert Koteles
+*   Senior Web developer
+*   July 2018
+*   JSON Application, test
+******************************************/
+
+/********************
+* General
+********************/
+* {
+	box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/********************
+* Item
+********************/
+.listitem {
+	position: relative;
+	max-width: 600px;
+	margin: 0 auto;
+	border-top: 1px dotted #000;
+	margin-bottom: 10px;
+}
+
+
+/********************
+* Image on left side
+********************/
+.listitem-image {
+	margin-bottom: 10px;
+}
+
+.listitem-thumb {
+	width: 100%;
+	display: block;
+}
+
+/********************
+* Content on right side
+********************/
+.listitem-content {
+	font-size: 13px;
+}
+
+.listitem-content > * {
+    margin-bottom: 5px;
+    display: block;
+}
+
+/********************
+* Title
+********************/
+.listitem-title {
+	font-size: 16px;
+	text-decoration: none;
+	color: #234b7b;
+	padding-bottom: 10px;
+	display: block;
+	padding-top: 5px;
+}
+
+/********************
+* Type
+********************/
+.listitem-type {
+    color: #c70c04;
+    font-weight: bold;
+}
+
+
+/********************
+* Summary
+********************/
+.listitem-author {
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+.listitem-summary {
+  
+}
+
+/********************
+* Rating
+********************/
+.listitem-rating {
+	width: 50px;
+	height: 9px;
+	background: url(../icons/ratings-empty.png) no-repeat left center;
+	background-size: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.listitem-rating:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../icons/ratings-full.png) no-repeat left center;
+	background-size: 100%;
+}
+
+.listitem-rating-5:after { left: -20%; }
+.listitem-rating-4:after { left: -40%; }
+.listitem-rating-3:after { left: -60%; }
+.listitem-rating-2:after { left: -80%; }
+.listitem-rating-1:after { left: -100%; }
+
+/********************
+* Reviews
+********************/
+.listitem-reviews {
+	clear: both;
+	background: url(../icons/icon-comment.svg) no-repeat left center;
+	background-size: 14px;
+	padding-left: 20px;
+	text-decoration: none;
+	color: #234b7b;
+}
+
+.listitem-reviewdate {
+
+}
+
+
+/********************
+* Media queries, 
+*	Mobile first
+********************/
+@media(min-width: 400px) {
+	.listitem:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	.listitem-image {
+		float: left;
+		margin-bottom: 0;
+	}
+
+	.listitem-content {
+		float: left;
+	}
+
+	.listitem-thumb {
+		width: 150px;
+	}
+
+	.listitem-content {
+		padding-left: 10px;
+		width: calc(100% - 200px);
+	}
+
+}
